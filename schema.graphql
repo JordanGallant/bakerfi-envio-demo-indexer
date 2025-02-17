@@ -1,0 +1,16 @@
+type BakerFiVault_AdminChanged {
+  id: ID!
+  previousAdmin: String!
+  newAdmin: String!
+}
+
+type BakerFiVault_BeaconUpgraded {
+  id: ID!
+  beacon: String!
+}
+
+type BakerFiVault_Upgraded {
+  id: ID!
+  implementation: String!
+}
+

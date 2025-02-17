@@ -1,0 +1,15 @@
+# yaml-language-server: $schema=./node_modules/envio/evm.schema.json
+name: bakerFi
+networks:
+- id: 8453
+  start_block: 0
+  contracts:
+  - name: BakerFiVault
+    address:
+    - 0x37327c99bBc522e677a97d01021dB20227faF60A
+    handler: src/EventHandlers.ts
+    events:
+    - event: AdminChanged(address previousAdmin, address newAdmin)
+    - event: BeaconUpgraded(address indexed beacon)
+    - event: Upgraded(address indexed implementation)
+rollback_on_reorg: false
